@@ -1,0 +1,29 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+*   Trying 127.0.0.1:3001...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to localhost (127.0.0.1) port 3001 (#0)
+> POST /api/documents/extract HTTP/1.1
+> Host: localhost:3001
+> User-Agent: curl/7.81.0
+> Accept: */*
+> Content-Length: 280866
+> Content-Type: multipart/form-data; boundary=------------------------31df7fac8e4f01ac
+> 
+} [65536 bytes data]
+* We are completely uploaded and fine
+100  274k    0     0  100  274k      0   227k  0:00:01  0:00:01 --:--:--  227k100  274k    0     0  100  274k      0   124k  0:00:02  0:00:02 --:--:--  124k100  274k    0     0  100  274k      0  87349  0:00:03  0:00:03 --:--:-- 87361100  274k    0     0  100  274k      0  66547  0:00:04  0:00:04 --:--:-- 66555* Mark bundle as not supporting multiuse
+< HTTP/1.1 500 Internal Server Error
+< X-Powered-By: Express
+< Access-Control-Allow-Origin: *
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 72
+< ETag: W/"48-c+xUtdVpCgGA4ENn2aRC8vPFivs"
+< Date: Wed, 06 Nov 2024 04:07:20 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+{ [72 bytes data]
+100  274k  100    72  100  274k     13  54421  0:00:05  0:00:05 --:--:-- 54445100  274k  100    72  100  274k     13  54421  0:00:05  0:00:05 --:--:--    18
+* Connection #0 to host localhost left intact
+{"error":"Internal Server Error","message":"Failed to process document"}

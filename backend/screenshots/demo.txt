@@ -1,0 +1,19 @@
+=== Document Capture Prototype Demo ===
+1. Sample Passport (from doubango.org):
+-rw-rw-r-- 1 ubuntu ubuntu 280665 Nov  6 04:21 uploads/sample_passport.jpg
+
+2. API Endpoint Test Command:
+curl -X POST -F "document=@uploads/sample_passport.jpg" http://localhost:3001/api/documents/extract
+
+3. Extraction Results:
+{
+    "name": "SPECIMEN",
+    "documentNumber": "99006000",
+    "expirationDate": "06.09.2016"
+}
+
+4. Implementation Details:
+- Backend: Node.js with TypeScript
+- OCR: Tesseract.js
+- MRZ Parsing: mrz package
+- Validation: All fields required

@@ -1,0 +1,10 @@
+import * as tf from '@tensorflow/tfjs';
+
+interface FraudDetectionCheck {
+  check: string;
+  passed: boolean;
+  confidence: number;
+  details?: string;
+}
+
+export class SimpleDocumentValidator {
