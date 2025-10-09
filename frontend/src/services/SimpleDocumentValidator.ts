@@ -4,8 +4,7 @@ import {
   ExtractedData,
   FaceDetectionResult,
   FraudDetectionCheck,
-  DocumentType,
-  DocumentProcessingResult
+  DocumentType
 } from '../types/validation';
 
 export class SimpleDocumentValidator {
@@ -171,6 +170,7 @@ export class SimpleDocumentValidator {
 
   public async detectFaces(imageData: ImageData | HTMLImageElement): Promise<FaceDetectionResult> {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const tensor = await this.loadImage(imageData);
 
       return {
